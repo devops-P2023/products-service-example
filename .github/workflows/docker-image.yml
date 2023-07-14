@@ -1,4 +1,4 @@
-name: Docker Image - ${{vars.SERVICE_NAME}}
+name: Docker Image - Products Service
 
 # This workflow created docker images, upload them in the DockerHub and run the containers for the BE
 on:
