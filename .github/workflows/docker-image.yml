@@ -14,7 +14,7 @@ jobs:
       SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
   build:
-
+    needs: SonarTest
     runs-on: ubuntu-latest
 
     steps:
