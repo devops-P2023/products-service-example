@@ -47,7 +47,7 @@ jobs:
         docker image push $USERNAME/$SERVICE_NAME:$TIME_STAMP
         docker run -d $USERNAME/$SERVICE_NAME:$TIME_STAMP
         docker pull devopsp23/products-service
-        # docker pull $USERNAME/$SERVICE_NAME
+      # docker pull $USERNAME/$SERVICE_NAME
         
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
