@@ -62,7 +62,7 @@ jobs:
       shell: bash
       env:
         AWS_CLUSTER_NAME: ${{ secrets.AWS_CLUSTER_NAME }}
-        IMAGE: ${{ secrets.DOCKERHUB_USERNAME }}/${{vars.SERVICE_NAME}}:$TIME_STAMP
+        IMAGE: "${{ secrets.DOCKERHUB_USERNAME }}/${{vars.SERVICE_NAME}}:${{ steps.date.outputs.date }}"
         APP: ${{vars.SERVICE_NAME}}
    
     
