@@ -46,7 +46,7 @@ jobs:
         docker build . -f ./Dockerfile --tag $USERNAME/$SERVICE_NAME:$TIME_STAMP
         docker image push $USERNAME/$SERVICE_NAME:$TIME_STAMP
         docker run -d $USERNAME/$SERVICE_NAME:$TIME_STAMP
-        docker pull devopsp23/products-service
+        docker pull devopsp23/products-service:$TIME_STAMP
       # docker pull $USERNAME/$SERVICE_NAME
         
     - name: Configure AWS Credentials
