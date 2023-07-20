@@ -46,9 +46,5 @@ jobs:
         docker build . -f ./Dockerfile --tag $USERNAME/$SERVICE_NAME:$TIME_STAMP
         docker image push $USERNAME/$SERVICE_NAME:$TIME_STAMP
         docker run -d $USERNAME/$SERVICE_NAME:$TIME_STAMP
-        
-        aws eks --region us-east-1 update-kubeconfig --name eks_cluster-default
-        kubectl run pod-2048 --image=$USERNAME/$SERVICE_NAME:$TIME_STAMP -l app=$SERVICE_NAME
-       
 
  
